@@ -1,3 +1,8 @@
+[user]
+	name = Greg Lavallee
+	email = greglavallee@wapolabs.com
+
+
 [alias]
 	# View abbreviated SHA, description, and history graph of the latest 20 commits
 	l = log --pretty=oneline -n 20 --graph --abbrev-commit
@@ -33,7 +38,8 @@
 	fm = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f"
 	# Remove branches that have already been merged with master
 	dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
-
+	praise = blame
+	vomit = commit
 [apply]
 	# Detect whitespace errors when applying a patch
 	whitespace = fix
@@ -88,3 +94,7 @@
 
 [push]
 	default = matching
+
+[help]
+	autocorrect = 1
+
