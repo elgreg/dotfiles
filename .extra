@@ -126,12 +126,14 @@ function remote_length() {
 
 alias clc='echo -n `history -p !!` | pbcopy'
 
+# pyenv
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
-# Virtual ENv
-export WORKON_HOME=~/.virtualenvs
-export VIRTUALENV_DISTRIBUTE=true
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
-. /usr/local/share/python/virtualenvwrapper.sh
+# # Virtual ENv
+# export WORKON_HOME=~/.virtualenvs
+# export VIRTUALENV_DISTRIBUTE=true
+# export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
+# . /usr/local/share/python/virtualenvwrapper.sh
 
 # NVM
 . ~/nvm/nvm.sh

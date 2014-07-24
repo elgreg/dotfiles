@@ -4,10 +4,10 @@ done
 unset file
 
 
-# Virtual ENv
-export WORKON_HOME=~/.virtualenvs
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
-. /usr/local/share/python/virtualenvwrapper.sh
+# # Virtual ENv
+# export WORKON_HOME=~/.virtualenvs
+# export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
+# . /usr/local/share/python/virtualenvwrapper.sh
 
 # NVM
 . ~/nvm/nvm.sh
