@@ -2,9 +2,10 @@
 # From original
 
 # .aliases
-alias trvpy='cd ~/dev/trove-web; workon trove-web; pserve --server-name proxy --reload development.ini'
+alias trvsrv='sudo nginx;'
+alias trvpy='cd ~/dev/trove-web; pserve --server-name proxy --reload development.ini'
 alias trvjs='cd ~/dev/trove-web; nvm use trove-web; gulp watch --sourcemap'
-alias startnginx='mkdir -p /tmp/nginx/cache/bitly; sudo nginx'
+alias startnginx='/; sudo nginx'
 
 # .bash_profile
 
@@ -37,7 +38,7 @@ source ~/keys/.aws_dev
 
 # Deployment Crap
 export me="greglavallee"
-export BUILD_BOX='ec2-107-22-101-189.compute-1.amazonaws.com'
+export BUILD_BOX='ec2-54-221-28-252.compute-1.amazonaws.com'
 export CANARY='54.197.240.62'
 
 # history stuff
@@ -52,9 +53,11 @@ alias gitx='open -a /Applications/GitX.app/Contents/MacOS/GitX'
 alias cdg='cd "$(git rev-parse --show-toplevel)"'
 
 # BrowserStackTunnel
-alias bstack='java -jar ~/Library/Extensions/Java/BrowserStackTunnel.jar 78zZwF2x179yqxKEqdsN localhost,8000,0'
+# alias bstack='java -jar ~/Library/Extensions/Java/BrowserStackTunnel.jar 78zZwF2x179yqxKEqdsN localhost,8000,0'
 
 alias nose='nosetests -sv'
+alias nosem='nostests -sv --processes=6'
+
 # NPM Completion
 # ==============
 ###-begin-npm-completion-###
@@ -126,8 +129,17 @@ function remote_length() {
 
 alias clc='echo -n `history -p !!` | pbcopy'
 
+
+
+## ============ ##
+## Virtual Envs ##
+## ============ ##
+
 # pyenv
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
+pyenv shell 2.6.9
+eval "$(pyenv virtualenv-init -)"
 
 # # Virtual ENv
 # export WORKON_HOME=~/.virtualenvs
@@ -145,3 +157,4 @@ if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 # GVM
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
 [[ -s "/Users/elgreg/.gvm/bin/gvm-init.sh" ]] && source "/Users/elgreg/.gvm/bin/gvm-init.sh"
+
