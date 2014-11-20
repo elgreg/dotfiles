@@ -36,10 +36,7 @@ export AWS_ELB_HOME="/usr/local/Cellar/elb-tools/1.0.23.0/libexec"
 export AWS_AUTO_SCALING_HOME="/usr/local/Library/LinkedKegs/auto-scaling/jars"
 source ~/keys/.aws_dev
 
-# Deployment Crap
-export me="greglavallee"
-export BUILD_BOX='ec2-54-221-28-252.compute-1.amazonaws.com'
-export CANARY='54.197.240.62'
+complete -C aws_completer aws
 
 # history stuff
 export HISTIGNORE="&:ls:[bf]g:exit"

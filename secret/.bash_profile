@@ -150,3 +150,10 @@ function remote_length() {
 }
 
 alias clc='echo -n `history -p !!` | pbcopy'
+
+# Deployment Crap
+export me="greglavallee"
+export BUILD_BOX='ec2-54-221-28-252.compute-1.amazonaws.com'
+export CANARY='54.197.240.62'
+
+
