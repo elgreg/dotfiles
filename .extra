@@ -1,8 +1,10 @@
 
 # From original
 
+export me="greglavallee"
+
 # .aliases
-alias trvsrv='sudo nginx;'
+alias trvsrv='sudo mkdir -p /usr/local/etc/nginx/cache/bitly; sudo nginx;'
 alias trvpy='cd ~/dev/trove-web; pserve --server-name proxy --reload development.ini'
 alias trvjs='cd ~/dev/trove-web; nvm use trove-web; gulp watch --sourcemap'
 alias startnginx='/; sudo nginx'
@@ -136,7 +138,7 @@ alias clc='echo -n `history -p !!` | pbcopy'
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
 pyenv shell 2.6.9
-eval "$(pyenv virtualenv-init -)"
+# eval "$(pyenv virtualenv-init -)"
 
 # # Virtual ENv
 # export WORKON_HOME=~/.virtualenvs
@@ -155,3 +157,12 @@ eval "$(pyenv virtualenv-init -)"
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
 [[ -s "/Users/elgreg/.gvm/bin/gvm-init.sh" ]] && source "/Users/elgreg/.gvm/bin/gvm-init.sh"
 
+
+# Perlbrew
+
+source ~/perl5/perlbrew/etc/bashrc
+
+
+# BFG
+
+alias bfg="java -jar ~/jars/bfg-1.11.8.jar"
