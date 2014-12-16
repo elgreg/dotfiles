@@ -17,8 +17,7 @@ alias startnginx='/; sudo nginx'
 alias git=hub
 alias gut=git
 
-# Completion
-source ~/.git-completion.sh
+
 
 export GOPATH=$HOME/go
 
@@ -135,34 +134,30 @@ alias clc='echo -n `history -p !!` | pbcopy'
 ## ============ ##
 
 # pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
-PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
-pyenv shell 2.6.9
-# eval "$(pyenv virtualenv-init -)"
 
-# # Virtual ENv
-# export WORKON_HOME=~/.virtualenvs
-# export VIRTUALENV_DISTRIBUTE=true
-# export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
-# . /usr/local/share/python/virtualenvwrapper.sh
 
 # NVM
-. ~/nvm/nvm.sh
+export NVM_DIR="/Users/elgreg/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-# RVM
+# # RVM
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-# GVM
-#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
-[[ -s "/Users/elgreg/.gvm/bin/gvm-init.sh" ]] && source "/Users/elgreg/.gvm/bin/gvm-init.sh"
+# # GVM
+# #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
+# [[ -s "/Users/elgreg/.gvm/bin/gvm-init.sh" ]] && source "/Users/elgreg/.gvm/bin/gvm-init.sh"
 
 
-# Perlbrew
+# # Perlbrew
 
 source ~/perl5/perlbrew/etc/bashrc
+PERL_MB_OPT="--install_base \"$HOME/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=$HOME/perl5"; export PERL_MM_OPT;
 
+# # BFG
 
-# BFG
-
-alias bfg="java -jar ~/jars/bfg-1.11.8.jar"
+# alias bfg="java -jar ~/jars/bfg-1.11.8.jar"
