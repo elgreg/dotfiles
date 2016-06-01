@@ -1,19 +1,28 @@
-
-# From original
-
-export me="greglavallee"
-
-# .bash_profile
-
 # Git
 # ========
 # hub
 alias git=hub
 alias gut=git
 
+# NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 
+# Docker
+# ==================
+#
+function docker_bash(){
+  docker ps | grep $1 | cut -f 1 -d " " | xargs -t -I ID bash -c '</dev/tty docker exec -it ID /bin/bash'
+}
 export GOPATH=$HOME/go
+
+
+# Pyenv
+# ==================
+#
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
 
 
 # history stuff
@@ -23,6 +32,8 @@ export HISTSIZE=20000
 shopt -s histappend
 
 
+export PATH=/usr/local/apache-maven-3.2.5/bin:$PATH
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
 
 
 alias nose='nosetests -sv'
@@ -86,7 +97,17 @@ fi
 
 export PROMPT_COMMAND='echo -ne "\033]0;$(basename "$PWD")\007"'
 
+## apex completion
 
+_apex()  {
+  COMPREPLY=()
+  local cur="${COMP_WORDS[COMP_CWORD]}"
+  local opts="$(apex autocomplete -- ${COMP_WORDS[@]:1})"
+  COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
+  return 0
+}
+
+complete -F _apex apex
 
 
 ## remote_length

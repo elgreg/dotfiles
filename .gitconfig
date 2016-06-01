@@ -96,7 +96,7 @@
 	insteadOf = "gist:"
 
 [push]
-	default = matching
+	default = current 
 
 [help]
 	autocorrect = 1
