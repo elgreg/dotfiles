@@ -15,8 +15,20 @@ export NVM_DIR="$HOME/.nvm"
 function docker_bash(){
   docker ps | grep $1 | cut -f 1 -d " " | xargs -t -I ID bash -c '</dev/tty docker exec -it ID /bin/bash'
 }
+
+alias dc='cd ~/dev/docker-configs'
+
+alias localnginx='docker run -p 80:80 -v `pwd`:/usr/share/nginx/html:ro -d nginx'
+
 export GOPATH=$HOME/go
 
+## CQ5
+
+alias gocqetc='cd ~/dev/CQ5/UI/src/main/content/jcr_root/etc/designs/slate/'
+alias gocqapps='cd ~/dev/CQ5/UI/src/main/content/jcr_root/apps/slate/'
+alias cqwatch='cd ~/dev/docker-congfigs/cq_frontend_watcher/; grunt'
+alias cqgrunt='docker-compose -f ~/dev/docker-configs/cq-frontend.yml run cq_front_end /bin/bash -c "cd /code && grunt"'
+alias cqstatic='docker-compose -f ~/dev/docker-configs/cq-frontend.yml up cq_static_files'
 
 # Pyenv
 # ==================
@@ -38,6 +50,13 @@ export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
 
 alias nose='nosetests -sv'
 alias nosem='nostests -sv --processes=6'
+
+# rbenv
+# ====================
+#
+export PATH="$HOME/.rbenv/bin:$HOME/.rbenv/shims:$PATH"
+
+
 
 # NPM Completion
 # ==============
@@ -116,3 +135,6 @@ function remote_length() {
 }
 
 alias clc='echo -n `history -p !!` | pbcopy'
+
+## Terraform
+PATH=/usr/local/terraform/bin:$HOME/terraform:$PATH
