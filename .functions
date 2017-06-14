@@ -234,3 +234,18 @@ function o() {
 function tre() {
 	tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
 }
+
+function it2prof() {
+	echo "it2prof $1";
+	echo -e "\033]50;SetProfile=$1\a";
+}
+
+
+function randomProfile(){
+	profiles=("Default" "Grey");
+	RANDOM=$$$(date +%s);
+	# Get random expression...
+	# thx https://stackoverflow.com/a/2388555
+	my_profile=${profiles[$RANDOM % ${#profiles[@]} ]};
+	it2prof $my_profile
+}
