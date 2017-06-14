@@ -39,7 +39,7 @@ eval "$(pyenv init -)"
 
 # history stuff
 export HISTIGNORE="&:ls:[bf]g:exit"
-export HISTCONTROL=erasedups
+export HISTCONTROL=ignoreboth
 export HISTSIZE=20000
 shopt -s histappend
 
@@ -138,3 +138,17 @@ alias clc='echo -n `history -p !!` | pbcopy'
 
 ## Terraform
 PATH=/usr/local/terraform/bin:$HOME/terraform:$PATH
+
+
+## Redux stuff
+scratch-redux() {
+ cd ~/dev/redux/scratch-cli
+ export CLAY_ACCESS_KEY=MadeUpAccessKey; node ./bin/cli.js bootstrap --amphora http://localhost:3001/cover-stories ../slate-redux/first-run/cover-stories/
+ cd -
+}
+
+
+## Export your aws config
+export AWS_ACCESS_KEY_ID=`aws configure get aws_access_key_id --profile=default`
+export AWS_SECRET_ACCESS_KEY=`aws configure get aws_secret_access_key --profile=default`
+
