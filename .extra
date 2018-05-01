@@ -152,5 +152,9 @@ scratch-redux() {
 export AWS_ACCESS_KEY_ID=`aws configure get aws_access_key_id --profile=default`
 export AWS_SECRET_ACCESS_KEY=`aws configure get aws_secret_access_key --profile=default`
 
-# Use a random iterm2Profile
-randomProfile
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/greglavallee/Dev/slate-amp/google-cloud-sdk/path.bash.inc' ]; then source '/Users/greglavallee/Dev/slate-amp/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/greglavallee/Dev/slate-amp/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/greglavallee/Dev/slate-amp/google-cloud-sdk/completion.bash.inc'; fi
