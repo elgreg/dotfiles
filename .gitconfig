@@ -70,6 +70,13 @@
 	praise = blame
 	vomit = commit
 
+	pp = "!git pull --prune; git branch --merged master | grep -v master | xargs git branch -d"
+
+	recent-branches=recent-branches=for-each-ref --sort=-committerdate --count=10 --format='%(refname:short) %(color:cyan)(%(committerdate:relative))%(color:reset)' refs/heads/
+
+	# Create a new branch from staging
+	nb = "!f() { git fetch origin; git branch $1 origin/stage; git checkout $1; }; f"
+
 	# List contributors with number of commits
 	contributors = shortlog --summary --numbered
 

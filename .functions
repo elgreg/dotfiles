@@ -250,3 +250,7 @@ function fastlyd(){
 function fastlydbypass(){
 	curl -sSl -XGET -H "Fastly-Debug: True" -H "User-Agent: MySlatePublishHandler" -D - "$@" -o /dev/null;
 }
+
+function fastlypurge(){
+	curl -XPURGE - "$@";
+}

@@ -83,6 +83,11 @@ endif
 " Start scrolling three lines before the horizontal window border
 set scrolloff=3
 
+
+" Limit lines to 72 characters for git
+au FileType gitcommit set tw=72
+
+
 " Strip trailing whitespace (,ss)
 function! StripWhitespace()
 	let save_cursor = getpos(".")

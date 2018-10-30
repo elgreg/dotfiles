@@ -162,3 +162,10 @@ alias reload="exec $SHELL -l"
 
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
+
+# i mistype git a lot
+alias igt=hub
+alias tig=hub
+alias gti=hub
+alias tgi=hub
+alias tig=hub
