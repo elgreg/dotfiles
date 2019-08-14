@@ -29,8 +29,6 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 # Slate Design
 
-export CQ5FRONT="$HOME/dev/CQ5/UI/src/main/content/jcr_root/etc/designs/slate/"
-
 # Highlight section titles in manual pages.
 export LESS_TERMCAP_md="${yellow}";
 
