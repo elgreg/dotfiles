@@ -131,10 +131,10 @@ alias clc='echo -n `history -p !!` | pbcopy'
 ## Terraform
 PATH=/usr/local/terraform/bin:$HOME/terraform:$PATH
 
-alias scratch='export CLAY_ACCESS_KEY=MadeUpAccessKey; node /Users/greglavallee/dev/redux/scratch-cli/bin/cli.js bootstrap --amphora http://local.dev.slate.com:3001/ $@'
-alias scratch-dev='export CLAY_ACCESS_KEY=MadeUpAccessKey; git checkout develop; node /Users/greglavallee/dev/redux/scratch-cli/bin/cli.js bootstrap --amphora https://dev.slate.com/ $@'
-
 alias clayimport='clay export --page $1 | clay import -k MadeUpAccessKey slate-redux'
+alias scratch='export CLAY_ACCESS_KEY=MadeUpAccessKey; node /Users/greglavallee/dev/scratch-cli/bin/cli.js bootstrap --amphora http://local.dev.slate.com:3001/ $@'
+alias scratch-dev='export CLAY_ACCESS_KEY=MadeUpAccessKey; git checkout develop; node /Users/greglavallee/redux/scratch-cli/bin/cli.js bootstrap --amphora https://dev.slate.com/ $@'
+
 
 ## Export your aws config
 export AWS_ACCESS_KEY_ID=`aws configure get aws_access_key_id --profile=default`
