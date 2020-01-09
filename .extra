@@ -131,7 +131,12 @@ alias clc='echo -n `history -p !!` | pbcopy'
 ## Terraform
 PATH=/usr/local/terraform/bin:$HOME/terraform:$PATH
 
-alias clayimport='clay export --page $1 | clay import -k MadeUpAccessKey slate-redux'
+
+function clayimportlocal(){
+  clay export "$@" | clay import --publish  --key local local
+}
+
+
 alias scratch='export CLAY_ACCESS_KEY=MadeUpAccessKey; node /Users/greglavallee/dev/scratch-cli/bin/cli.js bootstrap --amphora http://local.dev.slate.com:3001/ $@'
 alias scratch-dev='export CLAY_ACCESS_KEY=MadeUpAccessKey; git checkout develop; node /Users/greglavallee/redux/scratch-cli/bin/cli.js bootstrap --amphora https://dev.slate.com/ $@'
 
@@ -142,7 +147,7 @@ export AWS_SECRET_ACCESS_KEY=`aws configure get aws_secret_access_key --profile=
 
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/greglavallee/Dev/google-cloud-sdk/path.bash.inc' ]; then source '/Users/greglavallee/Dev/google-cloud-sdk/path.bash.inc'; fi
+if [ -f '/Users/greglavallee/google-cloud-sdk/path.bash.inc' ]; then . '/Users/greglavallee/google-cloud-sdk/path.bash.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/greglavallee/Dev/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/greglavallee/Dev/google-cloud-sdk/completion.bash.inc'; fi
+if [ -f '/Users/greglavallee/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/greglavallee/google-cloud-sdk/completion.bash.inc'; fi

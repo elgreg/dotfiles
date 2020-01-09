@@ -34,3 +34,10 @@ export LESS_TERMCAP_md="${yellow}";
 
 # Don’t clear the screen after quitting a manual page.
 export MANPAGER='less -X';
+
+# Various stuff for ANDROID
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+export ANDROID_HOME=/Users/$USER/Library/Android/sdk
+export ANDROID_SDK_HOME=/Users/$USER/Library/Android/sdk
+export ANDROID_AVD_HOME=/Users/$USER/.android/avd
+export PATH=${ANDROID_SDK_ROOT}/emulator:$PATH
