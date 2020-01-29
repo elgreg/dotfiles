@@ -32,7 +32,9 @@ if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -
 # history stuff
 export HISTIGNORE="&:ls:[bf]g:exit"
 export HISTCONTROL=ignoreboth
-export HISTSIZE=20000
+export HISTFILESIZE=1000000
+export HISTSIZE=1000000
+export PROMPT_COMMAND='history -a'
 shopt -s histappend
 
 
