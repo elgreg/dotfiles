@@ -1,2 +1,29 @@
+# Enable persistent REPL history for `node`.
+export NODE_REPL_HISTORY=~/.node_history;
+# Allow 32³ entries; the default is 1000.
+export NODE_REPL_HISTORY_SIZE='32768';
+# Use sloppy mode by default, matching web browsers.
+export NODE_REPL_MODE='sloppy';
+
+# Prefer US English and use UTF-8.
+export LANG='en_US.UTF-8';
+export LC_ALL='en_US.UTF-8';
+
+
+
+# Slate Design
+
+# Highlight section titles in manual pages.
+export LESS_TERMCAP_md="${yellow}";
+
+# Don’t clear the screen after quitting a manual page.
+export MANPAGER='less -X';
+
+# Various stuff for ANDROID
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+export ANDROID_HOME=/Users/$USER/Library/Android/sdk
+export ANDROID_SDK_HOME=/Users/$USER/Library/Android/sdk
+export ANDROID_AVD_HOME=/Users/$USER/.android/avd
+export PATH=${ANDROID_SDK_ROOT}/emulator:$PATH
 export NODE_EXTRA_CA_CERTS="$HOME/dev/slate-web/nginx/configs/ssl/minica.pem"
 export ELGREG_LOG_PATH="/Volumes/elgreg_encrypted/log"
