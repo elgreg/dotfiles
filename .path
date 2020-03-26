@@ -3,3 +3,4 @@ export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
 export PATH=/Users/$USER/Library/Android/sdk/tools:$PATH
 export PATH=/Users/$USER/Library/Android/sdk/tools/bin:$PATH
 export PATH=/Users/$USER/Library/Android/sdk/platform-tools:$PATH
+export PATH="/Users/$USER/Library/Python/2.7/bin:$PATH"

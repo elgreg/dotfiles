@@ -1,8 +1,8 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
-cd "$(dirname "${BASH_SOURCE}")";
+cd "$(dirname "${(%):-%N}");
 
-git pull origin master;
+git pull origin zsh;
 
 function doIt() {
 	rsync --exclude ".git/" \
@@ -12,7 +12,7 @@ function doIt() {
 		--exclude "README.md" \
 		--exclude "LICENSE-MIT.txt" \
 		-avh --no-perms . ~;
-	source ~/.bash_profile;
+	source ~/.zshrc;
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then

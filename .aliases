@@ -62,3 +62,4 @@ alias reload="exec $SHELL -l"
 
 # i mistype git a lot
 
+alias elog="$ELGREG_LOG_PATH/elgreg-log.sh"
