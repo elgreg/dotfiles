@@ -20,7 +20,7 @@ export LESS_TERMCAP_md="${yellow}";
 export MANPAGER='less -X';
 
 # Various stuff for ANDROID
-export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+# export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 export ANDROID_HOME=/Users/$USER/Library/Android/sdk
 export ANDROID_SDK_HOME=/Users/$USER/Library/Android/sdk
 export ANDROID_AVD_HOME=/Users/$USER/.android/avd

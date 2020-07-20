@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-cd "$(dirname "${(%):-%N}");
+cd "$(dirname "${(%):-%N}")";
 
 git pull origin zsh;
 
@@ -15,10 +15,10 @@ function doIt() {
 	source ~/.zshrc;
 }
 
-if [ "$1" == "--force" -o "$1" == "-f" ]; then
+if [ "$1" = "--force" -o "$1" = "-f" ]; then
 	doIt;
 else
-	read -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1;
+	vared -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " -c REPLY;
 	echo "";
 	if [[ $REPLY =~ ^[Yy]$ ]]; then
 		doIt;
