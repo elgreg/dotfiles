@@ -63,6 +63,7 @@ alias reload="exec $SHELL -l"
 # i mistype git a lot
 
 alias elog="$ELGREG_LOG_PATH/elgreg-log.sh"
+alias mylog="$HOME/mylog.sh"
 
 
 # duh
@@ -72,3 +73,7 @@ alias duh="du -h"
 # reset usb for when mic is behaving badly
 
 alias resetusb='sudo launchctl stop com.apple.usbd; sudo launchctl start com.apple.usbd'
+
+clayimport() {
+	clay export $1 | clay import --key local local $2;
+}

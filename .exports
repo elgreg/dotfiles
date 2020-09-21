@@ -20,10 +20,11 @@ export LESS_TERMCAP_md="${yellow}";
 export MANPAGER='less -X';
 
 # Various stuff for ANDROID
-# export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+export JAVA_HOME=`/usr/libexec/java_home`
 export ANDROID_HOME=/Users/$USER/Library/Android/sdk
 export ANDROID_SDK_HOME=/Users/$USER/Library/Android/sdk
 export ANDROID_AVD_HOME=/Users/$USER/.android/avd
 export PATH=${ANDROID_SDK_ROOT}/emulator:$PATH
 export NODE_EXTRA_CA_CERTS="$HOME/dev/slate-web/nginx/configs/ssl/minica.pem"
 export ELGREG_LOG_PATH="/Volumes/elgreg_encrypted/log"
+export LOG_PATH="$HOME/Documents/mylog"
