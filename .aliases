@@ -75,5 +75,12 @@ alias duh="du -h"
 alias resetusb='sudo launchctl stop com.apple.usbd; sudo launchctl start com.apple.usbd'
 
 clayimport() {
+	echo $1;
+	echo $2;
 	clay export $1 | clay import --key local local $2;
 }
+
+
+# pico8
+
+alias pico8=/Applications/pico-8/PICO-8.app/Contents/MacOS/pico8
