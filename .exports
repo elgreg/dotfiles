@@ -21,10 +21,13 @@ export MANPAGER='less -X';
 
 # Various stuff for ANDROID
 export JAVA_HOME=`/usr/libexec/java_home`
-export ANDROID_HOME=/Users/$USER/Library/Android/sdk
-export ANDROID_SDK_HOME=/Users/$USER/Library/Android/sdk
-export ANDROID_AVD_HOME=/Users/$USER/.android/avd
+export ANDROID_SDK_ROOT=/Users/$USER/Library/Android/sdk
+
+export PATH=${ADROID_SDK_ROOT}/tools:$PATH
+export PATH=${ANDROID_SDK_ROOT}/tools/bin:$PATH
+export PATH=${ANDROID_SDK_ROOT}/platform-tools:$PATH
 export PATH=${ANDROID_SDK_ROOT}/emulator:$PATH
+
 export NODE_EXTRA_CA_CERTS="$HOME/dev/slate-web/nginx/configs/ssl/minica.pem"
 export ELGREG_LOG_PATH="/Volumes/elgreg_encrypted/log"
 export LOG_PATH="$HOME/Documents/mylog"
